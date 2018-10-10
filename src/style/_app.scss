@@ -1,0 +1,9 @@
+@import './settings';
+@import './header';
+@import './footer';
+@import './content';
+
+.app {
+    display: flex;
+    flex-direction: column;
+}
