@@ -1,9 +1,14 @@
 @import './settings';
-@import './header';
-@import './footer';
-@import './content';
+@import './plate';
+@import './box';
+@import './puddle';
+@import './container';
+@import './buttons';
+
 
 .app {
+    text-align: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
