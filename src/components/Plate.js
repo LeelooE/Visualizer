@@ -11,9 +11,9 @@ const Plate = props => (
     <Box />
     <Box />
     <Box />
+    <Box left="35px" top="155px" color="white"/>
     <Box />
-    <Box />
-    <Box />
+    <Box left="155px" top="155px" color="black"/>
     <Box />
     <Box />
     <Box />

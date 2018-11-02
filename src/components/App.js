@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import Plate from "./Plate";
 import Droplet from "./Droplet";
 import Container from "./Container";
-import uuidv1 from "uuid";
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -29,7 +28,7 @@ class ConnectedApp extends Component {
       color1: "red",
       color2: undefined
     };
-    this.handleDroplet = this.handleDroplet.bind(this);
+    
     this.handleSubmit = this.handleSquare.bind(this);
     this.handleCircle = this.handleCircle.bind(this);
     this.handleReset = this.handleReset.bind(this);
@@ -68,13 +67,6 @@ class ConnectedApp extends Component {
       animation1: "mix1 10s forwards"
     });
   };
-  handleDroplet() {
-    const left = "155px";
-    const top = "155px";
-    const color = "black";
-    const id = uuidv1();
-    this.props.addDroplet({ left, top, color, id });
-  }
 
   render() {
     return (
@@ -109,7 +101,6 @@ class ConnectedApp extends Component {
           <button onClick={this.handleCircle}>Circle</button>
           <button onClick={this.handleReset}>Reset</button>
           <button onClick={this.handleMix}>Mix</button>
-          <button onClick={this.handleDroplet}>Add Puddle</button>
         </div>
       </div>
     );
