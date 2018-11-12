@@ -10,6 +10,8 @@ const Droplet = props => (
     top: props.top, 
     animation: props.animation, 
     backgroundColor: props.backgroundColor,
+    width: props.width,
+    height: props.height
   }}
   >
   </div>

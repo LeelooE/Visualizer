@@ -1,15 +1,17 @@
-import { ADD_ARTICLE } from "../constants/actionTypes";
-import { ADD_DROPLET } from "../constants/actionTypes";
+import {
+  ADD_DROPLET,
+  SAVE
+} from "../constants/actionTypes";
 
 const initialState = {
-  articles: [],
-  droplets: []
+  droplets: [],
+  working: undefined
 };
 
-const rootReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_ARTICLE:
-      return { ...state, articles: [...state.articles, action.payload] };
+    case SAVE:
+    return {...state, working: action.payload, droplets: action.payload}
     case ADD_DROPLET:
       return { ...state, droplets: [...state.droplets, action.payload] };
     default:
@@ -17,4 +19,4 @@ const rootReducer = (state = initialState, action) => {
   }
 };
 
-export default rootReducer;
+export default reducer;
