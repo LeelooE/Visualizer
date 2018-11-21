@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import React, { Component } from "react";
 import Container from "./Container";
 import { fetchData } from '../actions/actions';
+import { fakefetchData } from '../actions/actions';
 
 const mapStateToProps = state => ({
   working: state.working
@@ -9,8 +10,9 @@ const mapStateToProps = state => ({
 
 class ConnectedApp extends Component {
   componentDidMount() {
-    this.props.dispatch(fetchData());
+    this.props.dispatch(fakefetchData(1)); //starts with one droplet using number 1 as an input
   }
+
   
   render() {
     const {working} = this.props;

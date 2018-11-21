@@ -1,10 +1,10 @@
 // states is a list of states, each of which looks like something
 // the server might send back
-states = [];
+ let states = [];
 
 // working is a state that the code below mutates.
 // we save copies of working into the states list
-working = {droplets: []};
+let working = {droplets: []};
 
 // save deep copies the working state into the states list
 function save() {
@@ -77,4 +77,4 @@ save();
 working.droplets[0].location = {y: 1, x: 1};
 save();
 
-console.log(states);
+console.log(states); 
