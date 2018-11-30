@@ -1,5 +1,5 @@
-import { ADD_DROPLET, SAVE } from "../constants/actionTypes";
-import {droplets1, droplets2, droplets3} from "../api/droplets.js";
+import { ADD_DROPLET, SAVE} from "../constants/actionTypes";
+import {droplets1, droplets2, droplets3, droplets4} from "../api/droplets.js";
 export const addDroplet = droplet => ({
   type: ADD_DROPLET,
   payload: droplet
@@ -9,11 +9,14 @@ export const save = working => ({
   type: SAVE,
   payload: working
 });
-
 function getData() {
   return fetch("http://localhost:3000/droplets")
     .then(response => response.json());
 }
+
+// export function transition(prevLocation, newLocation) {
+
+// }
 
 export function fetchData() {
   return dispatch => {
@@ -43,8 +46,14 @@ export function fakefetchData(num) {
   return dispatch => {
     dispatch(save(droplets3));
   }
+  case 4:
+  return dispatch => {
+    dispatch(save(droplets4));
+  }
   default:
   return console.log("the fakefetchData() not working");
 }
 }
+
+
 

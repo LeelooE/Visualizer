@@ -2,6 +2,15 @@
 export const droplets1 = [
   {
     id: 1,
+    location: { y: 0, x: 0 },
+    dimensions: { y: 1, x: 1 },
+    volume: 1.0,
+    color: "blue"
+  }
+];
+export const droplets4 = [
+  {
+    id: 1,
     location: { y: 1, x: 0 },
     dimensions: { y: 1, x: 1 },
     volume: 1.0,

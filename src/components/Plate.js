@@ -38,7 +38,6 @@ const ConnectedPlate = ({ droplets }) => (
         el.location.x > 0 ? el.location.x * 60 + ((60 - width)/2) : ((60 - width)/2);
       let top =
         el.location.y > 0 ? el.location.y * 60 + ((60 - width)/2) : ((60 - width)/2);
-      console.log(height);
       return (
         <Droplet
           key={el.id}
