@@ -1,7 +1,7 @@
 import {
   ADD_DROPLET,
   SAVE
-} from "../constants/actionTypes";
+} from "../actions/actions";
 
 const initialState = {
   droplets: [],
